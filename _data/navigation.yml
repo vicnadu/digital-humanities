@@ -1,6 +1,10 @@
 main:
   - title: "Posts"
     url: /posts/
+  - title: "Digital Narrative"
+    url: /digital-narrative/
+  - title: "Final Presentation"
+    url: /final-presentation/
   - title: "Categories"
     url: /categories/
   - title: "Tags"
