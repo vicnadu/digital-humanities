@@ -67,6 +67,7 @@ In the first meeting, we both worked together to brainstorm the initial idea, wh
 ##### Insiya
 * Came up with the initial idea during the brainstorming
 * Used Voyant to analyze the corpus
+* Formatted the Markdown code
 * Wrote the following sections:
     * Introduction
     * Background
