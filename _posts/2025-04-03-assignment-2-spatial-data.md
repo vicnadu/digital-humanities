@@ -39,8 +39,13 @@ In the Zanzibar Gazette, these data were presented in textual or tabular format 
 
 Initially, my plan was to handle two large tables from the Zanzibar Gazette: one from January 1916 and another from September 1916. I intended to merge the two tables and to generate a single CSV file that would allow me to compare the types of imported goods, their values, and any price fluctuations between the two dates. This approach seemed promising for a more robust analysis, but it proved to be impractical as the AI models struggled to handle so much data.
 
-The full CSV file is the following:
-[View the CSV file on GitHub](https://github.com/vicnadu/digital-humanities/blob/master/assets/data/Perplexity_January_1916_Imports.csv)
+Original table to be extracted:
+
+![Screenshots of original table](https://raw.githubusercontent.com/vicnadu/digital-humanities/refs/heads/master/assets/images/january-1916_1.png)
+![Screenshots of original table](https://raw.githubusercontent.com/vicnadu/digital-humanities/refs/heads/master/assets/images/january-1916_2.png)
+
+CSV file:
+[on GitHub](https://github.com/vicnadu/digital-humanities/blob/master/assets/data/Perplexity_January_1916_Imports.csv)
 
 ### Challenges with Large-Scale AI Extraction
 
