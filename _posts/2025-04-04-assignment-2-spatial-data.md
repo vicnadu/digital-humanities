@@ -1,5 +1,8 @@
 ---
 title: "Assignment 2 - Spatial Data"
+categories:
+  - Assignments
+  - Blog
 tags:
   - Assignments
   - Kepler
