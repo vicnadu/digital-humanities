@@ -1,13 +1,9 @@
 ---
-title: "Assignment 2 - Spatial Data"
-categories:
-  - Assignments
-  - Blog
-tags:
-  - Assignments
-  - Kepler
-  - CSV
-  - AI
+layout: post
+title: Assignment 2 - Spatial Data
+subtitle:
+tags: [Assignments , Kepler ,  CSV, AI]
+comments: false
 ---
 
 # Introduction
