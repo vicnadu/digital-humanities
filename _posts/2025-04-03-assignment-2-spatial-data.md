@@ -10,17 +10,19 @@ tags:
   - AI
 ---
 
-# Introduction
+# Spatial Data - Zanzibar Gazette
+
+## Introduction
 
 The Zanzibar Gazette is a colonial-era newspaper that offers an invaluable record of the region’s imports and exports, legal notices, and administrative announcements. For this assignment, I chose a large table of imports into Zanzibar in January 1916, partly because I wanted a rich dataset that would demonstrate both the potential and the challenges of using generative AI tools for large-scale data extraction. The following essay details the rationale behind this choice, the difficulties encountered in transferring the data into CSV format with AI tools, the subsequent steps taken to visualize the data spatially on Kepler.gl, and my reflections regarding the process.
 
-# Thick Mapping: Context and Relevance
+## Thick Mapping: Context and Relevance
 
 One of the guiding concepts of this project is “thick mapping,” a method that combines multiple location-based datasets to highlight the geographical aspects of historical events. In the context of Zanzibar’s colonial history, thick mapping can help us see how trade routes, imported commodities, and cultural interactions were geographically dispersed or concentrated. If we imagine eventually adding layers for exports, shipping routes, or demographic data, we could start building a detailed picture of Zanzibar’s global connections during the British colonial period.
 
 The 1916 Zanzibar Gazette data was a starting point for that bigger goal. Although I ended up focusing on a single month’s (January 1916) import table, the intention was to compare it with a September 1916 table and possibly others. This approach would have allowed an even richer comparative view of fluctuations in types of merchandise, prices, and geographic origins over time. However, due to AI data extraction limitations, it made more sense to focus on just one table for this assignment.
 
-# The Source and Its Data
+## The Source and Its Data
 
 The source material for this assignment was the 1916 edition of the Zanzibar Gazette, specifically a tabular statement of imports in January of 1916. This table is extensive, listing over a 100 commodities, from arms and ammunition to everyday grocery items, along with their weight, quantities, values, and points of origin. Some of the key attributes in the table include:
 
@@ -31,16 +33,16 @@ The source material for this assignment was the 1916 edition of the Zanzibar Gaz
 
 In the Zanzibar Gazette, these data were presented in textual or tabular format without any geospatial metadata. Therefore, one of the tasks was to implement the dataset with latitude and longitude columns so that each import’s region of origin could be visualized on a world map.
 
-# Part 1: Transferring the Data into a CSV File
+## Part 1: Transferring the Data into a CSV File
 
-## Initial Approach
+### Initial Approach
 
 Initially, my plan was to handle two large tables from the Zanzibar Gazette: one from January 1916 and another from September 1916. I intended to merge the two tables and to generate a single CSV file that would allow me to compare the types of imported goods, their values, and any price fluctuations between the two dates. This approach seemed promising for a more robust analysis, but it proved to be impractical as the AI models struggled to handle so much data.
 
 The full CSV file is the following:
 [View the CSV file on GitHub](https://github.com/vicnadu/digital-humanities/blob/master/assets/data/Perplexity_January_1916_Imports.csv)
 
-## Challenges with Large-Scale AI Extraction
+### Challenges with Large-Scale AI Extraction
 
 The main issue was the sheer volume of data from the import tables. Each table had over 100 rows, making it difficult for most AI models to accurately process and output a complete, properly formatted CSV. My initial attempts involved:
 
@@ -56,7 +58,7 @@ However, as I tried to process a large quantity of data from the tables, I encou
 
 Given the consistent errors and omissions, I realized that I would need to spend a disproportionate amount of time cleaning and verifying any AI-generated CSV if I continued with the plan to merge January and September data. This would be counterproductive to the assignment’s intention, which was to leverage AI to automate most of the process, not to create more excessive manual labor. Ultimately, I decided to focus exclusively on the January table, which still provided a large amount of data, with more than 100 rows of merchandise and 6 columns of regions to work with.
 
-## Final CSV Creation
+### Final CSV Creation
 
 After deciding to use only the January 1916 table, I was able to simplify my prompts and feed a more manageable dataset to Perplexity Pro. By reducing the scope to one table, the AI-generated CSV was near perfectly accurate, though it still required some manual corrections. Additionally, Perplexity also modified the structure of the table without any explicit prompts from my end, fitting the table into a better format for Kepler. The final CSV included:
 
@@ -68,7 +70,7 @@ After deciding to use only the January 1916 table, I was able to simplify my pro
 
 The incorporation of latitude and longitude was completely automated with Perplexity, which was easily verified for its accuracy on Kepler. For example, London (United Kingdom) was assigned approximately (51.5074, -0.1278), Paris (Continent, Europe) around (48.8566, 2.3522), India around (20.5937, 78.9629), and so forth.
 
-# Part 2: Creating an Interactive Map in Kepler.gl
+## Part 2: Creating an Interactive Map in Kepler.gl
 
 With the CSV file in hand, I moved on to Kepler.gl to visualize the data. Kepler.gl is a robust, browser-based geospatial analysis tool that can generate interactive maps with different layers and filters. Below are some key steps and findings:
 
@@ -81,7 +83,7 @@ With the CSV file in hand, I moved on to Kepler.gl to visualize the data. Kepler
 
 An example of the Kepler.gl visualization (as shown above) revealed the distribution of imported goods, with color gradations to represent monetary value.
 
-# Findings and Observations
+### Findings and Observations
 
 Even with a single month’s data, several patterns could be noted:
 
@@ -92,7 +94,7 @@ Even with a single month’s data, several patterns could be noted:
 
 If we were to scale up and incorporate data from the September 1916 table (and potentially other months or years), we could look for seasonal patterns or shifts in trade alliances, possibly revealing how global events (such as World War I) impacted the flow of goods to and from Zanzibar.
 
-# Reflection on the Automation Process
+## Reflection on the Automation Process
 
 This assignment highlighted both the benefits and challenges of using AI for large-scale data extraction: Below are some reflections on that process:
 
@@ -115,7 +117,7 @@ Below are examples of some prompts that I used in the mentioned AI models:
 - **Prompt 4:**  
   "I need help doing a spatial data assignment. Below I will write the assignment description, which is divided into three parts. The first is transferring the data of one table into a CSV file. The second is transferring that data into Kepler.gl, creating an interactive map/data visualization. The third is writing a 1500-word essay analyzing the process. I need your help specifically with the first step (creating the CSV file). I will upload a PDF file for the table of imports to Zanzibar in January, as well as two screenshots of the same table in case that is better to use. Therefore, you should use the CSV text that I already have for the January table. However, you will include the latitude and longitude of all of the regions in the table (Europe, Asia, etc) while maintaining the same structure of the original table. Implement the latitude and longitude data in the most efficient way (for example, as additional columns). Remember that the purpose of this data will be to create a visualization of the origin of imports into Zanzibar in January 1916. Here is the CSV text that you need to modify:"
 
-# Generative AI Research Reflections
+## Generative AI Research Reflections
 
 As *Provocations from the Humanities for Generative AI Research* argues, AI-generated content is shaped by the biases of its training data and the assumptions embedded in its algorithms. This is particularly relevant when working with colonial-era documents like the 1910 Zanzibar Gazette, where the structure of the data itself reflects historical power dynamics. The way imports were recorded (what was categorized, emphasized, or left out) was possibly influenced by the British colonial administration’s economic priorities rather than the perspectives of Zanzibari traders or consumers.
 
@@ -125,7 +127,7 @@ Zanzibar’s position in the early 20th century as a key trading hub in the Indi
 
 Ultimately, this assignment demonstrates that while generative AI can be a powerful tool for digital humanities research, it should not be used uncritically. The extraction and visualization of historical data must be guided by an awareness of both the limitations of AI and the underlying structures of the historical records themselves. By applying these principles to the 1916 Zanzibar Gazette, it is possible to not only uncover patterns in colonial trade, but also to engage in a broader discussion about how digital tools shape our understanding of the past.
 
-# If Expanded Further
+## If Expanded Further
 
 Had I been able to successfully merge the January and September 1916 tables, a more detailed analysis would have been possible:
 
@@ -135,11 +137,11 @@ Had I been able to successfully merge the January and September 1916 tables, a m
 
 Nonetheless, the single-month focus still provided a comprehensive view of Zanzibar’s import economy and the global connections that shaped it.
 
-# Conclusion and Future Directions
+## Conclusion and Future Directions
 
 This whole process was both interesting and, at times, frustrating. On one hand, it showcased the immense potential of generative AI tools to automate data extraction from historical newspapers like the Zanzibar Gazette. On the other hand, it revealed the technology’s current limitations when confronted with large tables. However, even with all the difficulties, visualizing the final table in Kepler.gl provided valuable insights into Zanzibar’s trade networks and the colonial power dynamics of the early 20th century.
 
-# Bibliography
+## Bibliography
 
 - Zanzibar Protectorate. *Index to the Official Gazette of the Zanzibar Government*. 1916. Print.
 - Provocations from the Humanities for Generative AI Research. (2025). [arXiv:2502.19190](https://arxiv.org/abs/2502.19190)
