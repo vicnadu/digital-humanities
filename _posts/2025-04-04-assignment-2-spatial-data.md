@@ -1,9 +1,10 @@
 ---
-layout: post
-title: Assignment 2 - Spatial Data
-subtitle:
-tags: [Assignments , Kepler ,  CSV, AI]
-comments: false
+title: "Assignment 2 - Spatial Data"
+tags:
+  - Assignments
+  - Kepler
+  - CSV
+  - AI
 ---
 
 # Introduction
