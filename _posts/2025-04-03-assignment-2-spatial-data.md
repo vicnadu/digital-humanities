@@ -150,3 +150,5 @@ This whole process was both interesting and, at times, frustrating. On one hand,
 
 - Zanzibar Protectorate. *Index to the Official Gazette of the Zanzibar Government*. 1916. Print.
 - Provocations from the Humanities for Generative AI Research. (2025). [arXiv:2502.19190](https://arxiv.org/abs/2502.19190)
+
+<!-- This assignment is ready to be graded. -->
