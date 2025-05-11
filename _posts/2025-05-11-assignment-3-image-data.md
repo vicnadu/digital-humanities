@@ -212,7 +212,7 @@ Therefore, we must approach computational tools not as neutral instruments, but 
 
 [Google Drive](https://drive.google.com/drive/folders/1LPu8nnRGknsNtkdGq_kow03iPMH_0qDy?usp=drive_link)
 
-<iframe src="https://drive.google.com/embeddedfolderview?id=1LPu8nnRGknsNtkdGq_kow03iPMH_0qDy#list" style="width:100%; height:600px; border:0;"></iframe>
+<iframe src="https://drive.google.com/embeddedfolderview?id=1LPu8nnRGknsNtkdGq_kow03iPMH_0qDy#grid" style="width:100%; height:600px; border:0;"></iframe>
 
 ## References
 
