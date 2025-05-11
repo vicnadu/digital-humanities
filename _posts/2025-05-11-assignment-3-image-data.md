@@ -56,7 +56,11 @@ For computational analysis (Parts 2-3 of the assignment), I developed three new 
 
 Orange Data Mining's workflow for unsupervised exploration began with importing images and generating Inception-v3 embeddings. The resulting visualizations revealed how algorithms group images by visual similarity rather than cultural function.
 
-<!-- ![Annotated Image Grid]() -->
+Image grid
+![Annotated Image Grid](https://raw.githubusercontent.com/vicnadu/digital-humanities/refs/heads/master/assets/images/Image%20Data/Process/Image%20Grid%201%20(Resize).png)
+
+Annotated image grid
+![Annotated Image Grid](https://raw.githubusercontent.com/vicnadu/digital-humanities/refs/heads/master/assets/images/Image%20Data/Process/Image%20Grid%202%20-%20Annotated.png)
 
 The annotated image grid divides into four quadrants, each revealing how machine vision prioritizes formal qualities over cultural context:
 
@@ -67,8 +71,24 @@ The annotated image grid divides into four quadrants, each revealing how machine
 -   Bottom-Left (Vintage Typography & Packaging): Tobacco products and snacks with muted, nostalgic color palettes cluster based on shared aesthetic qualities rather than function.
     
 -   Bottom-Right (Vibrant Product Photography): Drink bottles with photographic elements and contemporary designs show the algorithm's sensitivity to modern visual language.
-   
-[FIGURE 3: Hierarchical Clustering Dendrogram (Clustering-Inception-v3-Ward.jpg)]
+
+Hierarchical Clustering Dendrogram
+![Hierarchical Clustering Dendrogram](https://raw.githubusercontent.com/vicnadu/digital-humanities/refs/heads/master/assets/images/Image%20Data/Process/Clustering%20-%20Inception-v3%20(Ward).png)
+
+Clustering example 1
+![Clustering example 1](https://raw.githubusercontent.com/vicnadu/digital-humanities/refs/heads/master/assets/images/Image%20Data/Process/Clustering%201.png)
+
+![Clustering example 1](https://raw.githubusercontent.com/vicnadu/digital-humanities/refs/heads/master/assets/images/Image%20Data/Process/Clustering%202%20(Image%20Viewer).png)
+
+Clustering example 2
+![Clustering example 2](https://raw.githubusercontent.com/vicnadu/digital-humanities/refs/heads/master/assets/images/Image%20Data/Process/Clustering%202.png)
+
+![Clustering example 2](https://raw.githubusercontent.com/vicnadu/digital-humanities/refs/heads/master/assets/images/Image%20Data/Process/Clustering%202%20(Image%20Viewer).png)
+
+Clustering example 3
+![Clustering example 3](https://raw.githubusercontent.com/vicnadu/digital-humanities/refs/heads/master/assets/images/Image%20Data/Process/Clustering%203.png)
+
+![Clustering example 3](https://raw.githubusercontent.com/vicnadu/digital-humanities/refs/heads/master/assets/images/Image%20Data/Process/Clustering%203%20(Image%20Viewer).png)
 
 The dendrogram visualization further revealed how algorithms organize visual culture. Cards formed a tight cluster based on uniform layout, while drinks and snacks mixed based on shared visual traits. For example, a 1970s cachaça label might group with a 1990s chocolate bar due to similar color schemes, despite their distinct cultural contexts. This pattern exemplifies what Impett and Offert call "reverse reading", the classifications tell us more about how Inception-v3 was trained on Western datasets than about Brazilian visual culture itself. The model's "vision" is shaped by ImageNet's biases, not by Brazilian design history.
 
@@ -84,7 +104,11 @@ The algorithm then attempted to predict these human-assigned categories using im
 
 This process highlighted that while my own classification was influenced by cultural associations and overall visual impression, the algorithm relied purely on pixel-level color distributions. As a result, the model sometimes disagreed with my judgment, revealing the gap between human perception (which can be context-sensitive and holistic) and computational perception (which is statistical and local).
 
-[FIGURE: Color-Dominance-Confusion-Matrix-Correct.jpg]
+Confusion Matrix (correct)
+![Color dominance](https://raw.githubusercontent.com/vicnadu/digital-humanities/refs/heads/master/assets/images/Image%20Data/Process/Color%20Dominance%20-%20Confusion%20Matrix%20(Correct).png)
+
+Confusion Matrix (misclassified)
+![Color dominance](https://raw.githubusercontent.com/vicnadu/digital-humanities/refs/heads/master/assets/images/Image%20Data/Process/Color%20Dominance%20-%20Confusion%20Matrix%20(Misclassified).png)
 
 Caption: Confusion matrix showing the algorithm’s predictions for “warm” and “cool” categories based on my manual assignments. Most images are correctly classified, but ambiguous or mixed-color designs present challenges for both human and machine.
 
@@ -98,13 +122,18 @@ The final categories were:
 -   Urban: Designs with geometric patterns, modern typography, and references to city life or industrial aesthetics.
 -   Neutral: Text-heavy, minimalist, or ambiguous designs that did not strongly evoke either tropical or urban themes.
 
-<!-- [Cultural-Symbolism-Image-Grid-1-Crop.jpg] -->
+Image grid
+![Cultural Symbolism](https://raw.githubusercontent.com/vicnadu/digital-humanities/refs/heads/master/assets/images/Image%20Data/Process/Cultural%20Symbolism%20-%20Image%20Grid%201%20(Crop).png)
 
 The image grid visualization reveals how these categories played out visually. “Tropical” images, often rich in greens, yellows, and illustrations of fruit or animals, tended to cluster together. “Neutral” designs, dominated by text or minimalist layouts, were scattered across the grid, sometimes bordering both tropical and urban clusters. “Urban” images, while fewer, appeared in pockets where modernist or geometric design elements were prominent.
 
 When I ran the supervised classification in Orange, the model achieved an overall accuracy of 64%, with the “urban” category performing the worst (58% accuracy). The confusion matrices illustrate where the model succeeded and struggled. Most notably, the algorithm often confused “urban” and “neutral” images. For example, packaging with bold, modern fonts but little visual context could be interpreted as either urban (due to typography) or neutral (due to the absence of explicit urban motifs). Similarly, some “tropical” images with less saturated colors or more abstract representations of nature were misclassified as neutral.
 
-<!-- [Cultural-Symbolism-Confusion-Matrix-Correct.jpg and Cultural-Symbolism-Confusion-Matrix-Misclassified.jpg] -->
+Confusion Matrix (correct)
+![Cultural Symbolism](https://raw.githubusercontent.com/vicnadu/digital-humanities/refs/heads/master/assets/images/Image%20Data/Process/Cultural%20Symbolism%20-%20Confusion%20Matrix%20(Correct).png)
+
+Confusion Matrix (misclassified)
+![Cultural Symbolism](https://raw.githubusercontent.com/vicnadu/digital-humanities/refs/heads/master/assets/images/Image%20Data/Process/Cultural%20Symbolism%20-%20Confusion%20Matrix%20(Misclassified).png)
 
 On one hand, the algorithm was quite successful at grouping overtly tropical imagery, showing sensitivity to color and illustration style. On the other, it struggled with the more ambiguous or hybrid designs, precisely those that, for a human with cultural context, might be the most interesting. The “neutral” category, while methodologically useful, also became a kind of “miscellaneous” group for images that defied easy classification, which may have contributed to the model’s confusion.
 
@@ -116,15 +145,25 @@ The algorithm then attempted to learn from these human-assigned labels. When ana
 
 Reflecting on these results, we can conclude that the process of labeling and categorizing was itself an interpretive act shaped by my own understanding of Brazilian culture and design history. The algorithm, by contrast, operated strictly on visual features, with no access to the cultural or historical context that informed my decisions. This gap between human and machine judgment became especially apparent in edge cases: for example, a minimalist label for a traditional Brazilian product might be seen as “neutral” by the algorithm, but as “tropical” by a human familiar with the brand’s legacy.
 
+Image Grid
+![Design Era](https://raw.githubusercontent.com/vicnadu/digital-humanities/refs/heads/master/assets/images/Image%20Data/Process/Design%20Era%20-%20Image%20Grid%201%20(Crop).png)
+
+Confusion Matrix (correct)
+![Design Era](https://raw.githubusercontent.com/vicnadu/digital-humanities/refs/heads/master/assets/images/Image%20Data/Process/Design%20Era%20-%20Confusion%20Matrix%20(Correct).png)
+
+Confusion Matrix (misclassified)
+![Design Era](https://raw.githubusercontent.com/vicnadu/digital-humanities/refs/heads/master/assets/images/Image%20Data/Process/Design%20Era%20-%20Confusion%20Matrix%20(Misclassified).png)
+
 ## Multimodal Models: CLIP's Cultural Flatness
 
 The 2DCLIP tool allowed mapping each image in a 2D space where the horizontal axis represents "Vintage" and the vertical axis represents "Modern." Rather than simply arranging images in a diagonal line (which would indicate these concepts are perfect opposites). This visualization revealed some insights:
 
 -   Temporal Ambiguity: Many images cluster in the middle, suggesting CLIP sees them as having mixed vintage and modern characteristics.
-    
+
 -   Visual Markers of Era: The upper portion contains mostly minimalist designs and cards with clean layouts, which CLIP associates strongly with "Modern" regardless of their actual production date.
 
-<!-- [FIGURE 5: 2DCLIP visualization with "Vintage" and "Modern" axes] -->
+2DCLIP
+![Vintage and Modern](https://raw.githubusercontent.com/vicnadu/digital-humanities/refs/heads/master/assets/images/Image%20Data/Process/2DCLIP%20-%20Vintage%20vs%20Modern.png)
 
 DV Explorer's image captions also resulted in some interesting results, but mostly because of how nonsensical they tended to be:
 
@@ -134,7 +173,19 @@ DV Explorer's image captions also resulted in some interesting results, but most
     
 -   A Skol beer was labeled generically as "a beer bottle with a beer in it". Accurate, but described in a peculiar way.
 
-<!-- [FIGURE 6: DV Explorer's mislabeled captions] -->
+![Image caption](https://raw.githubusercontent.com/vicnadu/digital-humanities/refs/heads/master/assets/images/Image%20Data/Process/image%20caption%20(12).png)
+
+![Image caption](https://raw.githubusercontent.com/vicnadu/digital-humanities/refs/heads/master/assets/images/Image%20Data/Process/image%20caption%20(11).png)
+
+![Image caption](https://raw.githubusercontent.com/vicnadu/digital-humanities/refs/heads/master/assets/images/Image%20Data/Process/image%20caption%20(1).png)
+
+![Image caption](https://raw.githubusercontent.com/vicnadu/digital-humanities/refs/heads/master/assets/images/Image%20Data/Process/image%20caption%20(13).png)
+
+![Image caption](https://raw.githubusercontent.com/vicnadu/digital-humanities/refs/heads/master/assets/images/Image%20Data/Process/image%20caption%20(3).png)
+
+![Image caption](https://raw.githubusercontent.com/vicnadu/digital-humanities/refs/heads/master/assets/images/Image%20Data/Process/image%20caption%20(5).png)
+
+![Image caption](https://raw.githubusercontent.com/vicnadu/digital-humanities/refs/heads/master/assets/images/Image%20Data/Process/image%20caption%20(7).png)
 
 These failures exemplify Impett and Offert's concept of "reverse reading", the model's outputs reveal its training on Anglophone data and Western visual conventions, not the cultural realities of Brazilian design.
 
@@ -148,13 +199,17 @@ This assignment revealed two major blind spots in algorithmic interpretation of 
 
 As Arnold and Tilton argue in Distant Viewing, computational methods must be accompanied by critical human interpretation. This assignment demonstrated that every algorithmic classification required human contextualization to avoid cultural flattening. The Orange workflow itself represents this connection between computation and interpretation, between distant and close viewing.
 
-<!-- [FIGURE 7: Orange workflow (Orange.jpg)] -->
+Orange workflow
+![Orange workflow](https://raw.githubusercontent.com/vicnadu/digital-humanities/refs/heads/master/assets/images/Image%20Data/Process/Orange.png)
 
 ## Conclusion
 
 This process of analyzing Brazilian visual culture via algorithmic interpretation revealed computational vision as simultaneously powerful and limited. Tools like Orange and CLIP detect patterns humans might miss, but it also misses the cultural and historical dimensions that give these objects meaning. The most valuable insight came not from what the algorithms correctly identified, but from what they misunderstood. When a cachaça label becomes "a book with a dog," we learn how machine vision fails to recognize typical images that it might not be trained upon, flattening differences into familiar categories. This "reverse reading" of neural networks reveals the biases embedded in their training data and architecture.
 
 Therefore, we must approach computational tools not as neutral instruments, but as culturally situated actors. When algorithms analyze Brazilian design, they translate between cultural frameworks, often losing crucial context in the process. Future work might integrate culturally specific training data, incorporate metadata on historical context, or develop hybrid methods that balance computational pattern recognition with local cultural knowledge. Nonetheless, computational analysis of cultural artifacts will always require reflexive awareness of how algorithms "see" differently than humans embedded in specific cultural traditions.
+
+## Google Drive with all of the pictures:
+<iframe src="https://drive.google.com/embeddedfolderview?id=1LPu8nnRGknsNtkdGq_kow03iPMH_0qDy#list" style="width:100%; height:600px; border:0;"></iframe>
 
 ## References
 
