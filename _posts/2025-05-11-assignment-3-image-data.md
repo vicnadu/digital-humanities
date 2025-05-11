@@ -209,7 +209,9 @@ This process of analyzing Brazilian visual culture via algorithmic interpretatio
 Therefore, we must approach computational tools not as neutral instruments, but as culturally situated actors. When algorithms analyze Brazilian design, they translate between cultural frameworks, often losing crucial context in the process. Future work might integrate culturally specific training data, incorporate metadata on historical context, or develop hybrid methods that balance computational pattern recognition with local cultural knowledge. Nonetheless, computational analysis of cultural artifacts will always require reflexive awareness of how algorithms "see" differently than humans embedded in specific cultural traditions.
 
 ## Google Drive with all of the pictures:
-https://drive.google.com/drive/folders/1LPu8nnRGknsNtkdGq_kow03iPMH_0qDy?usp=drive_link
+
+[Google Drive](https://drive.google.com/drive/folders/1LPu8nnRGknsNtkdGq_kow03iPMH_0qDy?usp=drive_link)
+
 <iframe src="https://drive.google.com/embeddedfolderview?id=1LPu8nnRGknsNtkdGq_kow03iPMH_0qDy#list" style="width:100%; height:600px; border:0;"></iframe>
 
 ## References
