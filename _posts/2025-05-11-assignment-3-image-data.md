@@ -56,7 +56,7 @@ For computational analysis (Parts 2-3 of the assignment), I developed three new 
 
 Orange Data Mining's workflow for unsupervised exploration began with importing images and generating Inception-v3 embeddings. The resulting visualizations revealed how algorithms group images by visual similarity rather than cultural function.
 
-![Annotated Image Grid]()
+<!-- ![Annotated Image Grid]() -->
 
 The annotated image grid divides into four quadrants, each revealing how machine vision prioritizes formal qualities over cultural context:
 
@@ -98,13 +98,13 @@ The final categories were:
 -   Urban: Designs with geometric patterns, modern typography, and references to city life or industrial aesthetics.
 -   Neutral: Text-heavy, minimalist, or ambiguous designs that did not strongly evoke either tropical or urban themes.
 
-[Cultural-Symbolism-Image-Grid-1-Crop.jpg]
+<!-- [Cultural-Symbolism-Image-Grid-1-Crop.jpg] -->
 
 The image grid visualization reveals how these categories played out visually. “Tropical” images, often rich in greens, yellows, and illustrations of fruit or animals, tended to cluster together. “Neutral” designs, dominated by text or minimalist layouts, were scattered across the grid, sometimes bordering both tropical and urban clusters. “Urban” images, while fewer, appeared in pockets where modernist or geometric design elements were prominent.
 
 When I ran the supervised classification in Orange, the model achieved an overall accuracy of 64%, with the “urban” category performing the worst (58% accuracy). The confusion matrices illustrate where the model succeeded and struggled. Most notably, the algorithm often confused “urban” and “neutral” images. For example, packaging with bold, modern fonts but little visual context could be interpreted as either urban (due to typography) or neutral (due to the absence of explicit urban motifs). Similarly, some “tropical” images with less saturated colors or more abstract representations of nature were misclassified as neutral.
 
-[Cultural-Symbolism-Confusion-Matrix-Correct.jpg and Cultural-Symbolism-Confusion-Matrix-Misclassified.jpg]
+<!-- [Cultural-Symbolism-Confusion-Matrix-Correct.jpg and Cultural-Symbolism-Confusion-Matrix-Misclassified.jpg] -->
 
 On one hand, the algorithm was quite successful at grouping overtly tropical imagery, showing sensitivity to color and illustration style. On the other, it struggled with the more ambiguous or hybrid designs, precisely those that, for a human with cultural context, might be the most interesting. The “neutral” category, while methodologically useful, also became a kind of “miscellaneous” group for images that defied easy classification, which may have contributed to the model’s confusion.
 
@@ -124,7 +124,7 @@ The 2DCLIP tool allowed mapping each image in a 2D space where the horizontal ax
     
 -   Visual Markers of Era: The upper portion contains mostly minimalist designs and cards with clean layouts, which CLIP associates strongly with "Modern" regardless of their actual production date.
 
-[FIGURE 5: 2DCLIP visualization with "Vintage" and "Modern" axes]
+<!-- [FIGURE 5: 2DCLIP visualization with "Vintage" and "Modern" axes] -->
 
 DV Explorer's image captions also resulted in some interesting results, but mostly because of how nonsensical they tended to be:
 
@@ -134,7 +134,7 @@ DV Explorer's image captions also resulted in some interesting results, but most
     
 -   A Skol beer was labeled generically as "a beer bottle with a beer in it". Accurate, but described in a peculiar way.
 
-[FIGURE 6: DV Explorer's mislabeled captions]
+<!-- [FIGURE 6: DV Explorer's mislabeled captions] -->
 
 These failures exemplify Impett and Offert's concept of "reverse reading", the model's outputs reveal its training on Anglophone data and Western visual conventions, not the cultural realities of Brazilian design.
 
@@ -148,7 +148,7 @@ This assignment revealed two major blind spots in algorithmic interpretation of 
 
 As Arnold and Tilton argue in Distant Viewing, computational methods must be accompanied by critical human interpretation. This assignment demonstrated that every algorithmic classification required human contextualization to avoid cultural flattening. The Orange workflow itself represents this connection between computation and interpretation, between distant and close viewing.
 
-[FIGURE 7: Orange workflow (Orange.jpg)]
+<!-- [FIGURE 7: Orange workflow (Orange.jpg)] -->
 
 ## Conclusion
 
